@@ -5,12 +5,12 @@ from .forms import PostForm
 from django.http import HttpResponseRedirect
 from .forms import CommentForm
 
-# List all posts
+
 def post_list(request):
     posts = Post.objects.all()
     return render(request, 'blog/post_list.html', {'posts': posts})
 
-# View a single post
+
 '''def post_detail(request, post_id):
    post = get_object_or_404(Post, id=post_id)
    comments = post.comments.all()
@@ -18,41 +18,36 @@ def post_list(request):
 
 
 
-# Create a new post
+
 @login_required
 def post_create(request):
     if request.method == 'POST':
-        # Check if 'title' and 'content' are in request.POST
-        title = request.POST.get('title')  # Use .get() to avoid MultiValueDictKeyError
+        title = request.POST.get('title')  
         content = request.POST.get('content')
         
-        # Ensure both title and content are provided
         if title and content:
-            # Create the new post
             Post.objects.create(title=title, content=content, author=request.user)
-            return redirect('post_list')  # Redirect to the post list after creation
+            return redirect('post_list') 
         else:
-            # Handle the case where title or content is missing
             return render(request, 'blog/post_form.html', {'error': 'Title and content are required.'})
     else:
         return render(request, 'blog/post_form.html')
 
 
 
-# Edit a post
+
 @login_required
 def post_edit(request, pk):
     post = get_object_or_404(Post, pk=pk)
 
-    # Ensure that only the author can edit the post
     if post.author != request.user:
-        return redirect('post_list')  # Or any other appropriate page
+        return redirect('post_list')  
 
     if request.method == 'POST':
         form = PostForm(request.POST, instance=post)
         if form.is_valid():
             form.save()
-            return redirect('post_detail', pk=post.pk)  # Redirect to the post detail page
+            return redirect('post_detail', pk=post.pk)  
     else:
         form = PostForm(instance=post)
 
@@ -62,13 +57,12 @@ def post_edit(request, pk):
 def post_delete(request, pk):
     post = get_object_or_404(Post, pk=pk)
 
-    # Ensure that only the author can delete the post
     if post.author != request.user:
-        return redirect('post_list')  # Or any other appropriate page
+        return redirect('post_list')  
 
     if request.method == 'POST':
         post.delete()
-        return redirect('post_list')  # Redirect to the list of posts after deletion
+        return redirect('post_list')  
 
     return render(request, 'blog/post_confirm_delete.html', {'post': post}) 
 

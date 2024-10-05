@@ -56,7 +56,7 @@ ROOT_URLCONF = 'blog_platform.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],  # Ensure this is pointing to the correct directory
+        'DIRS': [BASE_DIR / 'templates'],  
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -130,5 +130,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-LOGIN_REDIRECT_URL = '/users/profile/'  # Temporary, we'll modify this in the view
+LOGIN_REDIRECT_URL = '/users/profile/'  
 LOGIN_URL = '/users/login/'

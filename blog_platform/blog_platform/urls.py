@@ -24,7 +24,6 @@ urlpatterns = [
     path('users/', include('users.urls')),  # Подключение URL из приложения Users
 ]
 
-# Добавление маршрутов для статических и медиафайлов (например, для профиля пользователя)
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
