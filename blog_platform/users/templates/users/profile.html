@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>{{ profile_user.username }}'s Profile</h2>
+  <p>Bio: {{ profile.bio }}</p>
+  
+  <!-- Display profile image if available -->
+  {% if profile.profile_picture %}
+    <img src="{{ profile.profile_picture.url }}" alt="{{ profile_user.username }}'s profile picture" width="150">
+  {% else %}
+    <p>No profile picture available</p>
+  {% endif %}
+
+  {% if user == profile_user %}
+    <a href="{% url 'profile_edit' profile_user.username %}">Edit Profile</a>
+  {% endif %}
+
+  <h3>Followers: {{ profile_user.followers.count }}</h3>
+  <h3>Following: {{ profile_user.following.count }}</h3>
+
+  <!-- Follow/Unfollow functionality -->
+  {% if user != profile_user %}
+    {% if is_following %}
+      <form method="post" action="{% url 'unfollow_user' profile_user.username %}">
+        {% csrf_token %}
+        <button type="submit">Unfollow</button>
+      </form>
+    {% else %}
+      <form method="post" action="{% url 'follow_user' profile_user.username %}">
+        {% csrf_token %}
+        <button type="submit">Follow</button>
+      </form>
+    {% endif %}
+  {% endif %}
+  
+  <h3>Posts by {{ profile_user.username }}</h3>
+  <ul>
+    {% for post in posts %}
+      <li><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a> - {{ post.created_at }}</li>
+    {% endfor %}
+  </ul>
+
+  <a href="{% url 'post_list' %}">Back to All Posts</a>
+{% endblock %}

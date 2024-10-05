@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{ post.title }}</h2>
+<p>{{ post.content }}</p>
+<p>By <a href="{% url 'profile_view' post.author.username %}">{{ post.author.username }}</a> on {{ post.created_at }}</p>
+
+<!-- Allow the author to edit or delete their post -->
+{% if post.author == user %}
+  <a href="{% url 'post_edit' post.pk %}">Edit</a>
+  <form method="post" action="{% url 'post_delete' post.pk %}" style="display:inline;">
+    {% csrf_token %}
+    <button type="submit">Delete</button>
+  </form>
+{% endif %}
+
+<h3>Comments</h3>
+{% for comment in post.comments.all %}
+    <div>
+        <p><strong><a href="{% url 'profile_view' comment.author.username %}">{{ comment.author.username }}</a></strong> on {{ comment.created_at }}</p>
+        <p>{{ comment.content }}</p>
+    </div>
+{% empty %}
+    <p>No comments yet.</p>
+{% endfor %}
+
+<h4>Add a Comment</h4>
+<form method="post">
+    {% csrf_token %}
+    <textarea name="content" required></textarea>
+    <button type="submit">Submit Comment</button>
+</form>
+
+<a href="{% url 'post_list' %}">Back to All Posts</a>
+{% endblock %}
+
+
