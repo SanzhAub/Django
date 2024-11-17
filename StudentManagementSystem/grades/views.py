@@ -28,3 +28,22 @@ class UpdateGradeView(APIView):
             return Response({"message": "Grade updated"}, status=status.HTTP_200_OK)
         except Student.DoesNotExist or Course.DoesNotExist:
             return Response({"error": "Student or course not found"}, status=status.HTTP_404_NOT_FOUND)
+        
+class GradeCreateView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request):
+        user = request.user
+
+        # Check teacher role
+        if user.role != "teacher":
+            return Response({"detail": "Forbidden"}, status=status.HTTP_403_FORBIDDEN)
+
+        # Parse data
+        student_id = request.data.get("student")
+        course_id = request.data.get("course")
+        grade_value = request.data.get("grade")
+
+        # Save grade
+        grade = Grade.objects.create(student_id=student_id, course_id=course_id, grade=grade_value)
+        return Response({"detail": "Grade added successfully"}, status=status.HTTP_201_CREATED)

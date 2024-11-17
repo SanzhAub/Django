@@ -5,9 +5,13 @@ from students.models import Student
 class Course(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
-    instructor = models.ForeignKey(User, on_delete=models.CASCADE, related_name="instructed_courses")
-    created_at = models.DateTimeField(auto_now_add=True)
-
+    instructor = models.ForeignKey(
+        User,
+        on_delete=models.SET_NULL,  # Prevent cascade deletion of courses
+        null=True,
+        related_name="courses"
+    )
+    
     def __str__(self):
         return self.name
 

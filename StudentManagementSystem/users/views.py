@@ -25,4 +25,12 @@ class UserProfileView(APIView):
     def get(self, request):
         serializer = UserSerializer(request.user)
         return Response(serializer.data)
+    
+class RestrictedDataView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        if request.user.role != "admin":
+            return Response({"detail": "Forbidden"}, status=status.HTTP_403_FORBIDDEN)
+        return Response({"data": "Restricted content"}, status=status.HTTP_200_OK)
 

@@ -17,12 +17,26 @@ class AttendanceListCreateView(generics.ListCreateAPIView):
 logger = logging.getLogger('student_management')
 
 class MarkAttendanceView(APIView):
-    def post(self, request, course_id, student_id):
+    permission_classes = [IsAuthenticated]
+    
+    def post(self, request, course_id):
+        user = request.user
+
+        # Only teachers can mark attendance
+        if user.role != "teacher":
+            return Response({"detail": "Forbidden"}, status=status.HTTP_403_FORBIDDEN)
+
+        # Check course exists
         try:
             course = Course.objects.get(id=course_id)
-            student = Student.objects.get(id=student_id)
-            attendance = Attendance.objects.create(student=student, course=course, status='present')
-            logger.info(f"Attendance marked for student {student.name} in course {course.name}")
-            return Response({"message": "Attendance marked"}, status=status.HTTP_200_OK)
-        except Course.DoesNotExist or Student.DoesNotExist:
-            return Response({"error": "Course or student not found"}, status=status.HTTP_404_NOT_FOUND)
+        except Course.DoesNotExist:
+            return Response({"detail": "Course not found"}, status=status.HTTP_404_NOT_FOUND)
+
+        # Mark attendance
+        student_id = request.data.get("student_id")
+        present = request.data.get("present", False)
+
+        attendance = Attendance.objects.create(
+            student_id=student_id, course=course, present=present
+        )
+        return Response({"detail": "Attendance marked successfully"}, status=status.HTTP_201_CREATED)

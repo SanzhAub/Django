@@ -18,9 +18,10 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/users/', include('users.urls')),  # Include the users app URLs
-    path('api/students/', include('students.urls')),
-    path('api/courses/', include('courses.urls')),
-    path('api/grades/', include('grades.urls')),
-    path('api/attendance/', include('attendance.urls')),
+    path('attendance/', include('attendance.urls')),
+    path('grades/', include('grades.urls')),
+    path('api/auth/', include('djoser.urls')),  # Ensure Djoser is included
+    path('api/auth/', include('djoser.urls.authtoken')),  # If using token-based auth
+    path('restricted-data/', include('users.urls')),  # Ensure this is included
 ]
+

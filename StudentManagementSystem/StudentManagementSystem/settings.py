@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'grades',
     'attendance',
     'notifications',
+    'django_celery_beat',
 ]
 
 MIDDLEWARE = [
@@ -70,7 +71,7 @@ REST_FRAMEWORK = {
 }
 
 DJOSER = {
-    'USER_ID_FIELD': 'id',
+    'USER_ID_FIELD': 'username',
     'LOGIN_FIELD': 'username',
     'SERIALIZERS': {
         'user_create': 'users.serializers.CustomUserCreateSerializer',
@@ -89,9 +90,22 @@ CACHES = {
     }
 }
 
+CELERY_BEAT_SCHEDULE = {
+    'send-attendance-reminder-daily': {
+        'task': 'notifications.tasks.send_attendance_reminder',
+        'schedule': 86400.0,  # Run every day (86400 seconds)
+    },
+    'send-grade-update-notification-weekly': {
+        'task': 'notifications.tasks.send_grade_update_notification',
+        'schedule': 604800.0,  # Run every week (604800 seconds)
+        'args': ['student@example.com', 'A+'],  # Example grade update
+    },
+}
+
 CELERY_BROKER_URL = 'redis://localhost:6379/0'
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
 
 CORS_ALLOW_ALL_ORIGINS = True
 

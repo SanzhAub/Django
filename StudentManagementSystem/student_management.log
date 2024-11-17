@@ -19,3 +19,37 @@ Unauthorized: /api/users/auth/users/
 Method Not Allowed: /api/users/auth/token/login/
 "GET /api/users/auth/token/login/ HTTP/1.1" 405 12552
 "POST /api/users/auth/token/login/ HTTP/1.1" 200 12341
+Bad Request: /api/attendance/
+Bad Request: /api/attendance/
+Not Found: /api/grades/2/
+Not Found: /api/some-protected-endpoint/
+Not Found: /attendance/mark/1/
+Not Found: /attendance/mark/1/
+Not Found: /grades/
+Not Found: /restricted-data/
+Not Found: /attendance/mark/1/
+Not Found: /attendance/mark/1/
+Not Found: /grades/
+Not Found: /restricted-data/
+Not Found: /api/auth/login/
+Unauthorized: /attendance/mark/1/
+Unauthorized: /attendance/mark/1/
+Unauthorized: /grades/
+Not Found: /restricted-data/
+Not Found: /api/auth/login/
+Bad Request: /grades/
+Not Found: /restricted-data/
+Not Found: /api/auth/login/
+Unauthorized: /attendance/mark/1/
+Unauthorized: /attendance/mark/1/
+Unauthorized: /grades/
+Not Found: /restricted-data/
+Not Found: /api/auth/login/
+Forbidden: /attendance/mark/1/
+Not Found: /attendance/mark/1/
+Bad Request: /grades/
+Forbidden: /attendance/mark/1/
+Not Found: /attendance/mark/1/
+Bad Request: /grades/
+Not Found: /restricted-data/
+Not Found: /restricted-data/
