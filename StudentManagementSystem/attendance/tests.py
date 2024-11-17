@@ -1,31 +1,57 @@
-from django.test import TestCase
-from users.models import User
-from courses.models import Course
-from rest_framework.test import APITestCase
 from rest_framework import status
+from django.test import TestCase
 from django.contrib.auth import get_user_model
+from rest_framework.authtoken.models import Token
+#from attendance.models import Attendance, Course, Student
+from rest_framework.test import APIClient
+from courses.models import Course, Enrollment
+from students.models import Student
+from datetime import date
+from rest_framework import status
 
-class AttendancePermissionsTest(APITestCase):
+class AttendancePermissionsTest(TestCase):
     def setUp(self):
-        # Create users
-        self.student = get_user_model().objects.create_user(username='student1', password='password123', role='student')
-        self.teacher = get_user_model().objects.create_user(username='teacher1', password='password123', role='teacher')
+        User = get_user_model()
+
+        self.student_user = User.objects.create_user(username="student", password="password123", role="student")
+        self.teacher_user = User.objects.create_user(username="teacher", password="password123", role="teacher")
         
-        # Log in and get the token for each user
-        student_response = self.client.post("/api/auth/token/login/", {"username": "student1", "password": "password123"})
-        self.student_token = student_response.data['auth_token']
+        self.student = Student.objects.create(user=self.student_user)
+        self.teacher = Student.objects.create(user=self.teacher_user)
 
-        teacher_response = self.client.post("/api/auth/token/login/", {"username": "teacher1", "password": "password123"})
-        self.teacher_token = teacher_response.data['auth_token']
+        self.course = Course.objects.create(name="Math 101")
+ 
+        self.enrollment = Enrollment.objects.create(course=self.course, student=self.student)
 
-    def test_student_cannot_mark_attendance(self):
-        # Authenticate as student
-        self.client.credentials(HTTP_AUTHORIZATION=f"Token {self.student_token}")
-        response = self.client.post("/attendance/mark/1/")
-        self.assertEqual(response.status_code, 403)  # Students cannot mark attendance
+        self.client = APIClient()
+
+        self.student_token = Token.objects.create(user=self.student_user)
+        self.teacher_token = Token.objects.create(user=self.teacher_user)
 
     def test_teacher_can_mark_attendance(self):
-        # Authenticate as teacher
-        self.client.credentials(HTTP_AUTHORIZATION=f"Token {self.teacher_token}")
-        response = self.client.post("/attendance/mark/1/")
-        self.assertEqual(response.status_code, 201)  # Teachers can mark attendance
+        self.client.credentials(HTTP_AUTHORIZATION=f"Token {self.teacher_token.key}")
+
+        data = {
+            "student": self.student.id,
+            "course": self.course.id,  
+            "date": date.today()  
+        }
+
+        
+        response = self.client.post(f"/attendance/mark/{self.course.id}/", data)  
+
+        
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+
+    def test_student_cannot_mark_attendance(self):
+        self.client.credentials(HTTP_AUTHORIZATION=f"Token {self.student_token.key}")
+
+        data = {
+            "student": self.student.id,
+            "course": self.course.id,  
+            "date": date.today()  
+        }
+        
+        response = self.client.post(f"/attendance/mark/{self.course.id}/", data)  
+
+        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)

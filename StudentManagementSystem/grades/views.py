@@ -10,10 +10,20 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 
-class GradeListCreateView(generics.ListCreateAPIView):
-    queryset = Grade.objects.all()
-    serializer_class = GradeSerializer
+class GradeListView(APIView):
     permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        grades = Grade.objects.filter(student=request.user)
+        serializer = GradeSerializer(grades, many=True)
+        return Response(serializer.data)
+
+    def post(self, request):
+        serializer = GradeSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 logger = logging.getLogger('student_management')
 
@@ -35,15 +45,12 @@ class GradeCreateView(APIView):
     def post(self, request):
         user = request.user
 
-        # Check teacher role
         if user.role != "teacher":
             return Response({"detail": "Forbidden"}, status=status.HTTP_403_FORBIDDEN)
 
-        # Parse data
         student_id = request.data.get("student")
         course_id = request.data.get("course")
         grade_value = request.data.get("grade")
 
-        # Save grade
         grade = Grade.objects.create(student_id=student_id, course_id=course_id, grade=grade_value)
         return Response({"detail": "Grade added successfully"}, status=status.HTTP_201_CREATED)

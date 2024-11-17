@@ -20,8 +20,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('attendance/', include('attendance.urls')),
     path('grades/', include('grades.urls')),
-    path('api/auth/', include('djoser.urls')),  # Ensure Djoser is included
-    path('api/auth/', include('djoser.urls.authtoken')),  # If using token-based auth
-    path('restricted-data/', include('users.urls')),  # Ensure this is included
+    path('api/auth/', include('djoser.urls')),  
+    path('api/auth/', include('djoser.urls.authtoken')),  
+    path('restricted-data/', include('users.urls')),  
+    path('api/', include('users.urls')),  
+    path('api/', include('attendance.urls')),  #
 ]
+
 

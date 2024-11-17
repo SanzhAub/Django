@@ -6,19 +6,15 @@ from users.models import User
 
 @shared_task
 def send_attendance_reminder():
-    """Send attendance reminders to students who haven't marked attendance."""
     today = localdate()
     
-    # Fetch all students
     students = User.objects.filter(role='student', is_active=True)
     
-    # Check if attendance is marked for each student
     missing_attendance_students = [
         student for student in students 
         if not Attendance.objects.filter(student=student, date=today).exists()
     ]
     
-    # Send reminder emails
     for student in missing_attendance_students:
         send_mail(
             subject='Attendance Reminder',
@@ -31,7 +27,6 @@ def send_attendance_reminder():
 
 @shared_task
 def send_grade_update_notification(student_email, course_name, grade):
-    """Send grade update notification to a student."""
     send_mail(
         subject='Grade Update Notification',
         message=f'Your grade for the course "{course_name}" has been updated to {grade}.',

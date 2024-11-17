@@ -1,8 +1,6 @@
 from django.urls import path
-from .views import GradeListCreateView
-from .views import GradeCreateView
+from .views import GradeListView
 
 urlpatterns = [
-    path('', GradeListCreateView.as_view(), name='grade-list-create'),
-    path("", GradeCreateView.as_view(), name="add-grade"),
+    path('', GradeListView.as_view(), name='grade-list'),
 ]

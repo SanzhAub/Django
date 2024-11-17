@@ -53,3 +53,692 @@ Not Found: /attendance/mark/1/
 Bad Request: /grades/
 Not Found: /restricted-data/
 Not Found: /restricted-data/
+Forbidden: /attendance/mark/1/
+Not Found: /attendance/mark/1/
+Bad Request: /grades/
+Not Found: /restricted-data/
+Not Found: /restricted-data/
+Internal Server Error: /attendance/mark/1/
+Traceback (most recent call last):
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: MarkAttendanceView.post() got an unexpected keyword argument 'id'
+Internal Server Error: /attendance/mark/1/
+Traceback (most recent call last):
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: MarkAttendanceView.post() got an unexpected keyword argument 'id'
+Bad Request: /grades/
+Not Found: /restricted-data/
+Not Found: /restricted-data/
+Unauthorized access attempt by user student1
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Bad Request: /grades/
+Not Found: /restricted-data/
+Not Found: /restricted-data/
+Unauthorized access attempt by user student1
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Bad Request: /grades/
+Not Found: /restricted-data/
+Unauthorized access attempt by user student1
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Not Found: /restricted-data/
+Not Found: /profile/
+Unauthorized access attempt by user student1
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Not Found: /restricted-data/
+Not Found: /profile/
+Internal Server Error: /attendance/mark/1/
+Traceback (most recent call last):
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: MarkAttendanceView.post() got an unexpected keyword argument 'id'
+Internal Server Error: /attendance/mark/1/
+Traceback (most recent call last):
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: MarkAttendanceView.post() got an unexpected keyword argument 'id'
+Not Found: /restricted-data/
+Not Found: /profile/
+Not Found: /attendance/mark/1/
+Not Found: /attendance/mark/1/
+Not Found: /restricted-data/
+Not Found: /profile/
+Unauthorized access attempt by user student1
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Not Found: /restricted-data/
+Not Found: /profile/
+Not Found: /restricted-data/
+Not Found: /profile/
+Not Found: /restricted-data/
+Not Found: /profile/
+Unauthorized: /attendance/mark/1/
+Unauthorized: /attendance/mark/1/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Bad Request: /attendance/mark/1/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Bad Request: /attendance/mark/1/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Bad Request: /attendance/mark/1/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Bad Request: /attendance/mark/1/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Bad Request: /attendance/mark/1/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Student 1 is not enrolled in course 1.
+Bad Request: /attendance/mark/1/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Student 1 is not enrolled in course 1.
+Bad Request: /attendance/mark/1/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Student 1 is not enrolled in course 1.
+Bad Request: /attendance/mark/1/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Internal Server Error: /attendance/mark/1/
+Traceback (most recent call last):
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: attendance_attendance.date
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\Desktop\Django\StudentManagementSystem\attendance\views.py", line 61, in post
+    attendance = Attendance.objects.create(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 891, in save
+    self.save_base(
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 997, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 1160, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\base.py", line 1201, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\sql\compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: attendance_attendance.date
+Not Found: /attendance/mark/
+Not Found: /attendance/mark/
+Internal Server Error: /attendance/mark/
+Traceback (most recent call last):
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: MarkAttendanceView.post() missing 1 required positional argument: 'course_id'
+Internal Server Error: /attendance/mark/
+Traceback (most recent call last):
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: MarkAttendanceView.post() missing 1 required positional argument: 'course_id'
+Not Found: /attendance/mark/
+Internal Server Error: /attendance/mark/
+Traceback (most recent call last):
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Acer\AppData\Local\Programs\Python\Python311\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: MarkAttendanceView.post() missing 1 required positional argument: 'course_id'
+Not Found: /attendance/mark/
+Not Found: /attendance/mark/
+Not Found: /attendance/mark/
+Not Found: /attendance/mark/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Not Found: /attendance/mark/
+Not Found: /attendance/mark/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Not Found: /attendance/mark/
+Not Found: /attendance/mark/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Not Found: /apiattendance/mark/1/
+Not Found: /apiattendance/mark/1/
+Not Found: /attendance/mark/
+Not Found: /attendance/mark/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Not Found: /api/attendance/mark/1/
+Not Found: /api/attendance/mark/1/
+Not Found: /attendance/mark/
+Not Found: /attendance/mark/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Not Found: /mark/1/
+Not Found: /mark/1/
+Not Found: /attendance/mark/
+Not Found: /attendance/mark/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 3088
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3139
+Not Found: /api/users/auth/token/login/
+"GET /api/users/auth/token/login/ HTTP/1.1" 404 4333
+Not Found: /api/users/auth/login/
+"GET /api/users/auth/login/ HTTP/1.1" 404 4315
+Not Found: /api/users/auth/login/
+"GET /api/users/auth/login/ HTTP/1.1" 404 4315
+Not Found: /api  /api/users/auth/login/
+"GET /api%20%20/api/users/auth/login/ HTTP/1.1" 404 3191
+Not Found: /api/api/users/auth/login/
+"GET /api/api/users/auth/login/ HTTP/1.1" 404 4327
+C:\Users\Acer\Desktop\Django\StudentManagementSystem\StudentManagementSystem\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Acer\Desktop\Django\StudentManagementSystem\users\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Acer\Desktop\Django\StudentManagementSystem\users\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Acer\Desktop\Django\StudentManagementSystem\users\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Acer\Desktop\Django\StudentManagementSystem\users\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 3235
+Not Found: /api/users/auth/users/me/
+"GET /api/users/auth/users/me/ HTTP/1.1" 404 4880
+Not Found: /api/ api/auth/login/
+"GET /api/%20api/auth/login/ HTTP/1.1" 404 4870
+C:\Users\Acer\Desktop\Django\StudentManagementSystem\users\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 3235
+Unauthorized: /api/auth/
+"GET /api/auth/ HTTP/1.1" 401 9988
+Not Found: /api/users/auth/users/me/
+"GET /api/users/auth/users/me/ HTTP/1.1" 404 4876
+Unauthorized: /api/
+"GET /api/ HTTP/1.1" 401 9942
+Unauthorized: /api/auth/
+"GET /api/auth/ HTTP/1.1" 401 9988
+"GET /api/auth/login HTTP/1.1" 301 0
+Method Not Allowed: /api/auth/login/
+"GET /api/auth/login/ HTTP/1.1" 405 12597
+Not Found: /attendance/mark/
+Not Found: /attendance/mark/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Not Found: /attendance/mark/
+Not Found: /attendance/mark/
+Not Found: /restricted-data/
+Not Found: /auth/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Watching for file changes with StatReloader
+Unauthorized: /api/auth/
+"GET /api/auth/ HTTP/1.1" 401 9988
+Not Found: /
+"GET / HTTP/1.1" 404 3235
+Not Found: /api/users/auth/token/login/
+"GET /api/users/auth/token/login/ HTTP/1.1" 404 4885
+Unauthorized: /api/auth/
+"GET /api/auth/ HTTP/1.1" 401 9988
+C:\Users\Acer\Desktop\Django\StudentManagementSystem\StudentManagementSystem\urls.py changed, reloading.
+Watching for file changes with StatReloader
+C:\Users\Acer\Desktop\Django\StudentManagementSystem\StudentManagementSystem\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /attendance/mark/
+Not Found: /attendance/mark/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Not Found: /attendance/mark/
+Not Found: /attendance/mark/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Not Found: /attendance/mark/
+Not Found: /attendance/mark/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Not Found: /attendance/mark/1/
+Not Found: /attendance/mark/1/
+Not Found: /attendance/mark/
+Not Found: /attendance/mark/
+Not Found: /api/auth/token/login/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Not Found: /attendance/mark/
+Not Found: /attendance/mark/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Not Found: /attendance/mark/
+Not Found: /attendance/mark/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Not Found: /attendance/mark/
+Not Found: /attendance/mark/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Not Found: /attendance/mark/
+Not Found: /attendance/mark/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Not Found: /attendance/mark/
+Not Found: /attendance/mark/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Bad Request: /attendance/mark/1/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Bad Request: /attendance/mark/1/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Bad Request: /attendance/mark/1/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Bad Request: /attendance/mark/1/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Bad Request: /attendance/mark/1/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Bad Request: /attendance/mark/1/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Unauthorized: /attendance/mark/1/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Bad Request: /attendance/mark/1/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Not Found: /attendance/mark/1/
+Not Found: /attendance/mark/1/
+Not Found: /attendance/mark/1/
+Not Found: /attendance/mark/1/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Not Found: /attendance/mark/1/
+Not Found: /attendance/mark/1/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Bad Request: /attendance/mark/1/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Bad Request: /attendance/mark/1/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Bad Request: /attendance/mark/1/
+Not Found: /restricted-data/
+Not Found: /auth/token/login/
+Unauthorized access attempt by user student
+Forbidden: /attendance/mark/1/
+Course with ID 1 not found.
+Not Found: /attendance/mark/1/

@@ -37,4 +37,4 @@ class StudentDetailView(generics.RetrieveUpdateAPIView):
     def perform_update(self, serializer):
         instance = serializer.save()
         cache_key = f"student_profile_{instance.pk}"
-        cache.delete(cache_key)  # Invalidate cache
+        cache.delete(cache_key)  

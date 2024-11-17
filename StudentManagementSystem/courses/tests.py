@@ -6,7 +6,7 @@ from users.models import User
 class CourseModelTest(TestCase):
     def setUp(self):
         self.instructor = User.objects.create_user(username="instructor", password="password123")
-    
+        
     def test_create_course(self):
         course = Course.objects.create(
             name="Mathematics",

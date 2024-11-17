@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'attendance',
     'notifications',
     'django_celery_beat',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -82,7 +83,7 @@ DJOSER = {
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': 'redis://127.0.0.1:6379/1',  # Adjust port if necessary
+        'LOCATION': 'redis://127.0.0.1:6379/1',  
         'OPTIONS': {
             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
         },
@@ -93,12 +94,12 @@ CACHES = {
 CELERY_BEAT_SCHEDULE = {
     'send-attendance-reminder-daily': {
         'task': 'notifications.tasks.send_attendance_reminder',
-        'schedule': 86400.0,  # Run every day (86400 seconds)
+        'schedule': 86400.0,  
     },
     'send-grade-update-notification-weekly': {
         'task': 'notifications.tasks.send_grade_update_notification',
-        'schedule': 604800.0,  # Run every week (604800 seconds)
-        'args': ['student@example.com', 'A+'],  # Example grade update
+        'schedule': 604800.0,  
+        'args': ['student@example.com', 'A+'],
     },
 }
 
