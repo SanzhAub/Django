@@ -7,6 +7,11 @@ class CustomUserCreateSerializer(UserCreateSerializer):
         model = User
         fields = ('id', 'username', 'password', 'email', 'role')
 
+    def validate_role(self, value):
+        if value not in ['student', 'teacher', 'admin']:
+            raise serializers.ValidationError("Invalid role")
+        return value
+
 class CustomUserSerializer(UserSerializer):
     class Meta(UserSerializer.Meta):
         model = User

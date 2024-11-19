@@ -18,13 +18,12 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('attendance/', include('attendance.urls')),
-    path('grades/', include('grades.urls')),
+    path('attendance/', include('attendance.urls')), 
+    path('grades/', include('grades.urls')),  
     path('api/auth/', include('djoser.urls')),  
     path('api/auth/', include('djoser.urls.authtoken')),  
-    path('restricted-data/', include('users.urls')),  
-    path('api/', include('users.urls')),  
-    path('api/', include('attendance.urls')),  #
+    path('api/users/', include('users.urls')),  
 ]
+
 
 

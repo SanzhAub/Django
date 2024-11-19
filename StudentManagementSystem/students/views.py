@@ -19,7 +19,7 @@ class StudentProfileView(APIView):
                 student = Student.objects.get(pk=pk)
                 serializer = StudentSerializer(student)
                 student_data = serializer.data
-                cache.set(cache_key, student_data, timeout=60 * 10)  # Cache for 10 minutes
+                cache.set(cache_key, student_data, timeout=60 * 10)  
             except Student.DoesNotExist:
                 return Response({"error": "Student not found"}, status=404)
 

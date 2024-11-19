@@ -8,6 +8,7 @@ from courses.models import Course, Enrollment
 from students.models import Student
 import logging
 
+
 logger = logging.getLogger('student_management')
 
 class AttendanceListCreateView(generics.ListCreateAPIView):
@@ -18,12 +19,10 @@ class AttendanceListCreateView(generics.ListCreateAPIView):
 
 
 class MarkAttendanceView(APIView):
-   
     permission_classes = [IsAuthenticated]
 
     def post(self, request, course_id):
         user = request.user
-
         if user.role != "teacher":
             logger.warning(f"Unauthorized access attempt by user {user.username}")
             return Response({"detail": "Forbidden"}, status=status.HTTP_403_FORBIDDEN)
@@ -49,18 +48,21 @@ class MarkAttendanceView(APIView):
             return Response({"detail": "Student is not enrolled in this course"}, status=status.HTTP_400_BAD_REQUEST)
 
         present = request.data.get("present")
-        if present not in [True, False]:
-            return Response({"detail": "Invalid value for 'present' (must be True or False)"}, status=status.HTTP_400_BAD_REQUEST)
+        if present is None or (not isinstance(present, bool) and not present.lower() in ['true', 'false']):
+            return Response({"detail": "'present' must be a boolean value (True or False)."}, status=status.HTTP_400_BAD_REQUEST)
+
+        if isinstance(present, str):
+            present = present.lower() == "true"
 
         attendance = Attendance.objects.create(
             student=student, course=course, status="present" if present else "absent"
         )
-
-        logger.info(f"Attendance marked for student {student.id} ({student.username}) in course {course.id} ({course.name}).")
+        
+        logger.info(f"Attendance marked for student {student.id} ({student.user.username}) in course {course.id} ({course.name}).")
         return Response(
             {
                 "detail": "Attendance marked successfully",
-                "student": student.username,
+                "student": student.user.username,
                 "course": course.name,
                 "status": "present" if present else "absent"
             },

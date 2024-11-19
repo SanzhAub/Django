@@ -1,6 +1,6 @@
 from django.db import models
-from users.models import User  # Assuming a custom User model
-from courses.models import Course  # Assuming Course model exists
+from users.models import User  
+from courses.models import Course  
 
 class Grade(models.Model):
     student = models.ForeignKey(User, on_delete=models.CASCADE, related_name='grades')
